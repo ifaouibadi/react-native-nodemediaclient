@@ -7,11 +7,12 @@
 //  Updated by badi ifaoui on 2/8/19.
 //
 
-
 #import <Foundation/Foundation.h>
-#import <React/RCTBridgeModule.h>
-@interface RCTNodeMediaClient : NSObject<RCTBridgeModule>
 
-@property (class, nonatomic, copy) NSString *premium;
+NS_ASSUME_NONNULL_BEGIN
+
+@interface RTCNodeCameraManager : NSObject
 
 @end
+
+NS_ASSUME_NONNULL_END

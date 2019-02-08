@@ -9,9 +9,11 @@
 
 
 #import <Foundation/Foundation.h>
-#import <React/RCTBridgeModule.h>
-@interface RCTNodeMediaClient : NSObject<RCTBridgeModule>
 
-@property (class, nonatomic, copy) NSString *premium;
+NS_ASSUME_NONNULL_BEGIN
+
+@interface RCTNodePlayerManager : NSObject
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -1,10 +1,12 @@
 //
-//  RCTNodePlayerView.h
+//  RCTNodePlayerView.m
 //
 //
 //  Created by Mingliang Chen on 2017/11/29.
 //  Copyright © 2017年 NodeMedia. All rights reserved.
+//  Updated by badi ifaoui on 2/8/19.
 //
+
 
 #import <UIKit/UIKit.h>
 
@@ -20,3 +22,4 @@
 -(int)pause;
 
 @end
+

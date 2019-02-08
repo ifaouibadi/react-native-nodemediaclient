@@ -1,10 +1,12 @@
 //
-//  RCTNodePlayerManager.m
-//  
+//  RCTNodePlayerView.m
+//
 //
 //  Created by Mingliang Chen on 2017/11/29.
 //  Copyright © 2017年 NodeMedia. All rights reserved.
+//  Updated by badi ifaoui on 2/8/19.
 //
+
 #import <React/RCTViewManager.h>
 #import <React/RCTBridge.h>
 #import <React/RCTUIManager.h>
@@ -17,7 +19,7 @@
 RCT_EXPORT_MODULE()
 
 - (UIView *)view {
-  return [[RCTNodePlayerView alloc] init];
+    return [[RCTNodePlayerView alloc] init];
 }
 
 RCT_EXPORT_VIEW_PROPERTY(inputUrl, NSString)
@@ -28,31 +30,31 @@ RCT_EXPORT_VIEW_PROPERTY(scaleMode, NSString)
 
 RCT_EXPORT_METHOD(start:(nonnull NSNumber *)reactTag)
 {
-  
-  [self.bridge.uiManager addUIBlock:
-   ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, RCTNodePlayerView *> *viewRegistry){
-     RCTNodePlayerView *view = viewRegistry[reactTag];
-     [view start];
-   }];
+    
+    [self.bridge.uiManager addUIBlock:
+     ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, RCTNodePlayerView *> *viewRegistry){
+         RCTNodePlayerView *view = viewRegistry[reactTag];
+         [view start];
+     }];
 }
 
 RCT_EXPORT_METHOD(stop:(nonnull NSNumber *)reactTag)
 {
-  
-  [self.bridge.uiManager addUIBlock:
-   ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, RCTNodePlayerView *> *viewRegistry){
-     RCTNodePlayerView *view = viewRegistry[reactTag];
-     [view stop];
-   }];
+    
+    [self.bridge.uiManager addUIBlock:
+     ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, RCTNodePlayerView *> *viewRegistry){
+         RCTNodePlayerView *view = viewRegistry[reactTag];
+         [view stop];
+     }];
 }
 
 RCT_EXPORT_METHOD(pause:(nonnull NSNumber *)reactTag)
 {
-  
-  [self.bridge.uiManager addUIBlock:
-   ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, RCTNodePlayerView *> *viewRegistry){
-     RCTNodePlayerView *view = viewRegistry[reactTag];
-     [view pause];
-   }];
+    
+    [self.bridge.uiManager addUIBlock:
+     ^(__unused RCTUIManager *uiManager, NSDictionary<NSNumber *, RCTNodePlayerView *> *viewRegistry){
+         RCTNodePlayerView *view = viewRegistry[reactTag];
+         [view pause];
+     }];
 }
 @end
